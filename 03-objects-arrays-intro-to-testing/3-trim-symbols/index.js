@@ -4,6 +4,21 @@
  * @param {number} size - the allowed size of consecutive identical symbols
  * @returns {string} - the new string without extra symbols according passed size
  */
-export function trimSymbols(string, size) {
 
-}
+
+export function trimSymbols(string, size) {
+  if (size === 0) return '';
+  if (size === undefined) return string;
+
+  const newString = string.slice(0, size);
+  const rest = [...string.slice(size)];
+
+  return rest.reduce((str, current) => {
+    if (!str.endsWith(current.repeat(size))) {
+      str += current;
+    }
+    return str;
+  }, newString);
+
+};
+
