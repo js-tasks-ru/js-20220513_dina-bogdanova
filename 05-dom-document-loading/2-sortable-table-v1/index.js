@@ -134,7 +134,7 @@ export default class SortableTable {
     this.render();
 
     document.querySelector("#root").append(this.element);
+ 
   }
-
 }
 
