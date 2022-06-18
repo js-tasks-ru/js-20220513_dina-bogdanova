@@ -9,7 +9,6 @@ export default class ColumnChart {
     this.value = value,
     this.formatHeading = formatHeading(value),
     this.render();
-    // this.initEventListeners();
   }
 
   getTemplate() {
@@ -35,7 +34,7 @@ export default class ColumnChart {
     const maxValue = Math.max(...this.data);
     const scale = this.chartHeight / maxValue;
 
-    let element = document.createElement("div");
+    const element = document.createElement("div");
     element.classList.add('column-chart__chart');
     element.dataset.element ="body";
     this.data.forEach((column) => {
@@ -72,9 +71,6 @@ export default class ColumnChart {
     this.render();
   }
 
-  // initEventListeners() {
-    //NOTE: в данном методе добавляем обработчики событий, если они есть
-  // }
 
   remove() {
     this.element.remove();
