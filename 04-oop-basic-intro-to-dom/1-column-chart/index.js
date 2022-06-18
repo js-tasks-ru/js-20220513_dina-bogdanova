@@ -1,5 +1,5 @@
 export default class ColumnChart {
-
+  
   chartHeight = 50;
 
   constructor({ data = [], label = '', link = '', value = 0, formatHeading = data => data } = {}) {
@@ -71,7 +71,6 @@ export default class ColumnChart {
     this.render();
   }
 
-
   remove() {
     this.element.remove();
   }
@@ -80,5 +79,5 @@ export default class ColumnChart {
     this.remove();
     //NOTE: удаляем обработчики событий, если они есть
   }
-
 }
+
