@@ -60,5 +60,4 @@ export default class NotificationMessage {
     //NOTE: удаляем обработчики событий, если они есть
   }
 
-
 }
